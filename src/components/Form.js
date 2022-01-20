@@ -39,7 +39,7 @@ function Forms() {
                newStr += char;
             }else if(digit.indexOf(char) > -1){
                 let newIndex = digit.indexOf(char) + num;
-                console.log("number" + newIndex +  " After index");
+                console.log("number " + newIndex +  " After index");
                 if(newIndex < digit.length && newIndex) {
                     newStr += digit[newIndex];
                     console.log(newStr)
@@ -50,7 +50,7 @@ function Forms() {
                 }
             }
             else{
-                console.log('Error occured');
+                console.log('Check your character exist in English alphabet');
             }
         }
         return setShiftedText(newStr);
@@ -65,7 +65,7 @@ function Forms() {
         setShiftNum(e.target.value);
     }
     const handleShift = () => {
-        if((inputText && shiftNum) && (inputText.length > 0 )){
+        if((inputText && shiftNum) && (inputText.length >= 0 && shiftNum > 0)){
             let text = inputText;
             let num = parseInt(shiftNum);
             shiftString(text,num);           
