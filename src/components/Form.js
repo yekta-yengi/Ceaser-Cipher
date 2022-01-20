@@ -4,6 +4,7 @@ import "./Form.css"
 
 function Forms() {
     const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','o','p','q','r','s','t','u','v','w','x','y','z'];
+    const digit = ['0','1','2','3','4','5','6','7','8','9'];
 
     const [inputText, setInputText] = useState(null);
     const [shiftNum, setShiftNum] = useState(null);
@@ -36,6 +37,17 @@ function Forms() {
                 }
             }else if(char ===' '){
                newStr += char;
+            }else if(digit.indexOf(char) > -1){
+                let newIndex = digit.indexOf(char) + num;
+                console.log("number" + newIndex +  " After index");
+                if(newIndex < digit.length && newIndex) {
+                    newStr += digit[newIndex];
+                    console.log(newStr)
+                } else {
+                    let shiftedIndex = -(digit.length - newIndex);
+                    newStr += digit[shiftedIndex];
+                    console.log(newStr)
+                }
             }
             else{
                 console.log('Error occured');
