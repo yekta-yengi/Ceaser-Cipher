@@ -73,7 +73,7 @@ function Forms() {
     }
     
 
-// inputlardan veriyi nasıl alacağımı bulmam lazım.
+
     return (
         <div className='formContainer'>
             <input className='inputNum' type={"number"} onChange={handleNumChange}></input>
@@ -85,36 +85,3 @@ function Forms() {
 }
 
 export default Forms
-
-
-{/*
-    <Formik
-            initialValues={{
-                textInp : '',
-                numInp : 0
-            }
-            }
-            validationSchema = {Yup.object({
-                textInp: Yup.string()
-                    .max(30,'Must be 30 char or less')
-                    .required('Required'),
-                numInp: Yup.number()
-                    .required
-            })}
-        >
-            <Form>
-                <TextInput
-                    label="Text"
-                    name="textInp"
-                    type="text"
-                    placeholder="Ceaser cipher"
-                />
-                <NumInput
-                    label="Shift"
-                    name="numInp"
-                    type="num"
-                    placeholder="Shift * times"
-                />
-            </Form>
-
-        </Formik> */}
